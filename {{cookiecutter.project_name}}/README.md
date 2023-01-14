@@ -17,8 +17,10 @@
 
 ## Installation
 
-run ./scripts/setup_host.env
+```
+./scripts/setup_host.env
 docker compose up -d --build
+```
 
 ## Tests
 

@@ -1,10 +1,10 @@
 {
-  "project_name": "hypermodern-python",
+  "project_name": "my-python-project",
   "package_name": "{{ cookiecutter.project_name.replace('-', '_') }}",
   "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
   "author": "Tarmily Wen",
-  "email": "tarmilywen@adt.com",
-  "github_user": "Tarmily-Wen-Percepta-AI",
+  "email": "tarmilywen@gmail",
+  "github_user": "ChickenTarm",
   "version": "0.0.0",
   "copyright_year": "{% now 'utc', '%Y' %}",
   "development_status": [

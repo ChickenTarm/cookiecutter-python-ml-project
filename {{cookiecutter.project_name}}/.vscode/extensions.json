@@ -7,6 +7,7 @@
         "kevinrose.vsc-python-indent",
         "njpwerner.autodocstring",
         "visualstudioexptteam.vscodeintellicode",
-        "ms-toolsai.jupyter"
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker",
     ]
 }

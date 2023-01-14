@@ -4,7 +4,6 @@
 
 [![Status][status badge]][status badge]
 [![Python Version][python version badge]][github page]
-[![CalVer][calver badge]][calver]
 [![License][license badge]][license]<br>
 [![Read the documentation][readthedocs badge]][readthedocs page]
 [![Tests][github actions badge]][github actions page]

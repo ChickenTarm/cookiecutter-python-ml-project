@@ -35,11 +35,10 @@
 
 <!-- badges-end -->
 
-Opinionated [Cookiecutter] template for ML Python package based on the
-[Hypermodern Python Cookiecutter] article series.
+Opinionated [Cookiecutter] template for ML Python package based on [Hypermodern Python Cookiecutter].
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
-[hypermodern python ookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
+[hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
 
 ## Usage
 

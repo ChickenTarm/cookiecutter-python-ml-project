@@ -10,4 +10,5 @@ services:
         - {{cookiecutter.project_name}}
     volumes:
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
+    # This is to allow for a long running container so VSCode can attach to it
     command: tail -F anything

@@ -31,34 +31,34 @@ numpy = "^1.24.1"
 opencv-python = "^4.7.0.68"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.10.0"
+black = "^22.12.0"
 flake8 = "^5.0.4"
 flake8-bandit = "^4.1.1"
-flake8-bugbear = "^22.10.27"
+flake8-bugbear = "^22.12.6"
 flake8-docstrings = "^1.6.0"
 flake8-rst-docstrings = "^0.2.7"
-isort = "^5.10.1"
-pygments = "^2.13.0"
-pyright = "^1.1.278"
-pre-commit = "^2.20.0"
-nox = "^2022.8.7"
+isort = "^5.11.4"
+pygments = "^2.14.0"
+pyright = "^1.1.289"
+pre-commit = "^2.21.0"
+nox = "^2022.11.21"
 nox-poetry = "^1.0.2"
 poethepoet = "^0.18.0"
-pep8-naming = "^0.13.2"
+pep8-naming = "^0.13.3"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.2.0"
-allure-pytest = "^2.11.1"
+pytest = "^7.2.1"
+allure-pytest = "^2.12.0"
 coverage = {extras = ["toml"], version = "^6.5.0"}
 xdoctest = "^1.1.0"
 typeguard = "^2.13.3"
-safety = "^2.3.1"
+safety = "^2.3.5"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^5.3.0"
 sphinx-autobuild = "^2021.3.14"
-sphinx-click = "^4.3.0"
-furo = "^2022.9.29"
+sphinx-click = "^4.4.0"
+furo = "^2022.12.7"
 
 [tool.poetry.scripts]
 {{cookiecutter.project_name}} = "{{cookiecutter.package_name}}.__main__:main"

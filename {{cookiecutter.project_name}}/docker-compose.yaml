@@ -7,6 +7,8 @@ services:
       context: .
       args:
         PYTHON_VERSION: "3.10"
+      tags:
+        - {{cookiecutter.project_name}}
     volumes:
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
     command: tail -F anything

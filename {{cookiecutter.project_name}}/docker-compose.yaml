@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  ml:
+    image: {{cookiecutter.project_name}}
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        PYTHON_VERSION: "3.10"
+    volumes:
+      - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
+    command: tail -F anything

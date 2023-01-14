@@ -15,6 +15,11 @@
 [black]: https://github.com/psf/black
 [pyright]: https://github.com/microsoft/pyright
 
+## Installation
+
+run ./scripts/setup_host.env
+docker compose up -d --build
+
 ## Tests
 
 To run all tests:

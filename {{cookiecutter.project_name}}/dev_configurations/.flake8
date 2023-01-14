@@ -1,0 +1,10 @@
+[flake8]
+select = B,B9,C,D,DAR,E,F,N,RST,S,W
+ignore = B008,C901,D100,D104,D105,D200,D205,D400,D401,D404,D407,E203,E501,RST201,RST203,RST301,RST401,RST499,S104,S404,S602,S605,S607,W503
+max-line-length = 140
+max-complexity = 10
+ignore-decorators=overrides
+docstring-convention = numpy
+per-file-ignores = tests/*:S101
+rst-roles = class,const,func,meth,mod,ref
+rst-directives = deprecated

@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "donjayamanne.python-extension-pack",
+        "donjayamanne.python-environment-manager",
+        "kevinrose.vsc-python-indent",
+        "njpwerner.autodocstring",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-toolsai.jupyter"
+    ]
+}

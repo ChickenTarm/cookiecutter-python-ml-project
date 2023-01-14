@@ -1,0 +1,6 @@
+.coverage
+dist
+docs
+*.nox/
+*.pytype/
+__pycache__/

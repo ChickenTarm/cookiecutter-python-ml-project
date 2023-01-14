@@ -1,0 +1,31 @@
+{
+    "[python]":{
+      "editor.semanticHighlighting.enabled": true,
+    },
+    "python.testing.pytestArgs": ["tests"],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportGeneralTypeIssues": "warning",
+      "reportPrivateImportUsage": "none",
+      "reportUnboundVariable": "warning"
+    },
+    "editor.semanticTokenColorCustomizations": {
+      "[One Dark Pro]": { // Apply to this theme only
+          "enabled": true,
+          "rules": {
+              "magicFunction:python": "#ee0000",
+              "function.declaration:python": "#990000",
+              "*.decorator:python": "#0000dd",
+              "*.typeHint:python": "#5500aa",
+              "*.typeHintComment:python": "#aaaaaa"
+          }
+      }
+    },
+  }
+  

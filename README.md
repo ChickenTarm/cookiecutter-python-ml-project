@@ -35,20 +35,16 @@
 
 <!-- badges-end -->
 
-<p align="center"><img alt="logo" src="docs/_static/logo.png" width="50%" /></p>
-
-[Cookiecutter] template for a Python package based on the
-[Hypermodern Python] article series.
-
-✨📚✨ [Read the full documentation][readthedocs page]
+Opinionated [Cookiecutter] template for ML Python package based on the
+[Hypermodern Python Cookiecutter] article series.
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
-[hypermodern python]: https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
+[hypermodern python ookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
 
 ## Usage
 
 ```console
-$ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
+$ cookiecutter https://github.com/ChickenTarm/my-ml-python-cookiecutter.git
 ```
 
 ## Features

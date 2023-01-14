@@ -16,7 +16,6 @@
 [black badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black project]: https://github.com/psf/black
 [calver badge]: https://img.shields.io/badge/calver-YYYY.MM.DD-22bfda.svg
-[calver]: http://calver.org/
 [code of conduct]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/blob/main/CODE_OF_CONDUCT.md
 [codecov badge]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance/branch/main/graph/badge.svg
 [codecov page]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance

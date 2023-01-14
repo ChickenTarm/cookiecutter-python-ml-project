@@ -31,8 +31,6 @@ RUN wget https://bootstrap.pypa.io/get-pip.py; \
     $(echo "python$PYTHON_VERSION") -m pip install --upgrade pip; \
     rm get-pip.py
 
-RUN curl -sSL https://install.python-poetry.org | $(echo "python$PYTHON_VERSION") -
-
 RUN mkdir -p /home/{{cookiecutter.project_name}}
 COPY poetry.lock pyproject.toml /home/{{cookiecutter.project_name}}/
 WORKDIR /home/{{cookiecutter.project_name}}/

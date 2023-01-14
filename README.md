@@ -48,13 +48,13 @@ $ cookiecutter https://github.com/ChickenTarm/my-ml-python-cookiecutter.git
 
 <!-- features-begin -->
 
+- Containerization and templated deployment services with [Docker]
 - Packaging and dependency management with [Poetry]
 - Test automation with [Nox]
 - Linting with [pre-commit] and [Flake8]
 - Continuous integration with [GitHub Actions]
 - Documentation with [Sphinx], [MyST], and [Read the Docs] using the [furo] theme
 - Automated uploads to [PyPI] and [TestPyPI]
-- Automated release notes with [Release Drafter]
 - Automated dependency updates with [Dependabot]
 - Code formatting with [Black] and [Prettier]
 - Import sorting with [isort]
@@ -69,9 +69,9 @@ $ cookiecutter https://github.com/ChickenTarm/my-ml-python-cookiecutter.git
 - Check documentation examples with [xdoctest]
 - Generate API documentation with [autodoc] and [napoleon]
 - Generate command-line reference with [sphinx-click]
-- Manage project labels with [GitHub Labeler]
 
 The template supports Python 3.7, 3.8, 3.9, and 3.10.
+
 
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [bandit]: https://github.com/PyCQA/bandit
@@ -80,6 +80,7 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [codecov]: https://codecov.io/
 [coverage.py]: https://coverage.readthedocs.io/
 [dependabot]: https://dependabot.com/
+[docker]: https://www.docker.com
 [flake8]: http://flake8.pycqa.org
 [furo]: https://pradyunsg.me/furo/
 [github actions]: https://github.com/features/actions

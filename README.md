@@ -35,6 +35,14 @@
 
 Opinionated [Cookiecutter] template for ML Python package based on [Hypermodern Python Cookiecutter].
 
+This is designed with reproducibility, distribution, and easy data wrangling and exploration in mind. Many different ml repos have differing: data structures, training loops, visualizations, and deployment.
+
+ - [fiftyone] is used to ensure standardization of formats. Many different datasets for the same task have different formats. Fiftyone fixes this since it has built many integrations for importing and exporting data. This makes data loading, and visualization much easier.
+ - [lightning] is used to put structure to machine learning code. It has a standard control flow where it is easy to learn. Lightning also has many integrations and abstractions that make training much more efficient and scalable.
+ - [wandb] is used to help visualize the actual training process. It allows for powerful and custom visualization needs and experiment comparison.
+ - Lastly, environment management is one of the biggest issues with ml. Too many machine learning repos do not have a [docker] container which makes cloning and using the project more difficult. Everything should be ran in containers unless there is a specific reason not to.
+
+
 [cookiecutter]: https://github.com/audreyr/cookiecutter
 [hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
 
@@ -49,6 +57,7 @@ $ cookiecutter https://github.com/ChickenTarm/my-ml-python-cookiecutter.git
 <!-- features-begin -->
 
 - Containerization and templated deployment services with [Docker]
+- Data management and visualization with [fiftyone] and [mongodb]
 - Packaging and dependency management with [Poetry]
 - Test automation with [Nox]
 - Linting with [pre-commit] and [Flake8]
@@ -81,11 +90,14 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [coverage.py]: https://coverage.readthedocs.io/
 [dependabot]: https://dependabot.com/
 [docker]: https://www.docker.com
+[fiftyone]: https://github.com/voxel51/fiftyone
 [flake8]: http://flake8.pycqa.org
 [furo]: https://pradyunsg.me/furo/
 [github actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
 [isort]: https://pycqa.github.io/isort/
+[lightning]: https://www.pytorchlightning.ai
+[mongodb]: https://github.com/mongodb/mongo
 [mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
 [napoleon]: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
@@ -103,6 +115,7 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [sphinx-click]: https://sphinx-click.readthedocs.io/
 [testpypi]: https://test.pypi.org/
 [typeguard]: https://github.com/agronholm/typeguard
+[wandb]: https://wandb.ai/site
 [xdoctest]: https://github.com/Erotemic/xdoctest
 
 <!-- features-end -->

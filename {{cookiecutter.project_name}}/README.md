@@ -15,6 +15,11 @@
 [black]: https://github.com/psf/black
 [pyright]: https://github.com/microsoft/pyright
 
+## Requirement
+
+This has only been tested on Ubuntu 22.04
+
+
 ## Installation
 
 ```

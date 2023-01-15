@@ -3,11 +3,8 @@
 <!-- badges-begin -->
 
 [![Status][status badge]][status badge]
-[![Python Version][python version badge]][github page]
 [![License][license badge]][license]<br>
 [![Read the documentation][readthedocs badge]][readthedocs page]
-[![Tests][github actions badge]][github actions page]
-[![Codecov][codecov badge]][codecov page]<br>
 [![pre-commit enabled][pre-commit badge]][pre-commit project]
 [![Black codestyle][black badge]][black project]
 [![Contributor Covenant][contributor covenant badge]][code of conduct]
@@ -15,18 +12,14 @@
 [black badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black project]: https://github.com/psf/black
 [calver badge]: https://img.shields.io/badge/calver-YYYY.MM.DD-22bfda.svg
-[code of conduct]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/blob/main/CODE_OF_CONDUCT.md
-[codecov badge]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance/branch/main/graph/badge.svg
-[codecov page]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance
+[code of conduct]: https://github.com/ChickenTarm/my-ml-python-cookiecutter/blob/main/CODE_OF_CONDUCT.md
 [contributor covenant badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
-[github actions badge]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/workflows/Tests/badge.svg
-[github actions page]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/actions?workflow=Tests
-[github page]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
-[license badge]: https://img.shields.io/github/license/cjolowicz/cookiecutter-hypermodern-python
+[github actions badge]: https://github.com/ChickenTarm/my-ml-python-cookiecutter/workflows/Tests/badge.svg
+[github page]: https://github.com/ChickenTarm/my-ml-python-cookiecutter
+[license badge]: https://img.shields.io/github/license/ChickenTarm/my-ml-python-cookiecutter
 [license]: https://opensource.org/licenses/MIT
 [pre-commit badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 [pre-commit project]: https://pre-commit.com/
-[python version badge]: https://img.shields.io/pypi/pyversions/cookiecutter-hypermodern-python-instance
 [readthedocs badge]: https://img.shields.io/readthedocs/cookiecutter-hypermodern-python/latest.svg?label=Read%20the%20Docs
 [readthedocs page]: https://cookiecutter-hypermodern-python.readthedocs.io/
 [status badge]: https://badgen.net/badge/status/alpha/d8624d
@@ -49,7 +42,7 @@ This is designed with reproducibility, distribution, and easy data wrangling and
 ## Usage
 
 ```console
-$ cookiecutter https://github.com/ChickenTarm/my-ml-python-cookiecutter.git
+$ cookiecutter https://github.com/ChickenTarm/cookiecutter-python-ml-project.git
 ```
 
 ## Features

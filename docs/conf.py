@@ -18,7 +18,7 @@ linkcheck_ignore = [
     "https://github.com/pycqa/pep8-naming#",
     "https://github.com/terrencepreilly/darglint#",
     "https://github.com/PyCQA/mccabe#",
-    "https://github.com/cjolowicz/cookiecutter-hypermodern-python/releases/tag/",
+    "https://github.com/ChickenTarm/cookiecutter-python-ml-project/releases/tag/",
     "https://cookiecutter-hypermodern-python.readthedocs.io",
     "https://badgen.net/badge/status/alpha/d8624d",
 ]

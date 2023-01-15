@@ -19,7 +19,7 @@
 
 ```
 ./scripts/setup_host.env
-docker compose up -d --build
+docker compose --env-file /etc/environment up -d --build
 ```
 
 ## Tests

@@ -35,5 +35,7 @@ RUN mkdir -p /home/{{cookiecutter.project_name}}
 COPY poetry.lock pyproject.toml /home/{{cookiecutter.project_name}}/
 WORKDIR /home/{{cookiecutter.project_name}}/
 RUN pip install poetry; \
+    poetry self add poetry-plugin-up; \
     poetry install; \
-    poetry run poe force-pytorch
+    poetry run poe pytorch; \
+    poetry run poe fiftyone

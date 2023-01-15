@@ -20,7 +20,8 @@ classifiers = [
 Changelog = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases"
 
 [tool.poe.tasks]
-force-pytorch = "python -m pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 -f https://download.pytorch.org/whl/torch_stable.html"
+pytorch = "python -m pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 -f https://download.pytorch.org/whl/torch_stable.html"
+fiftyone = "python -m pip install fiftyone"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"

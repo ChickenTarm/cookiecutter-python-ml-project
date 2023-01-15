@@ -1,4 +1,8 @@
 version: "3.9"
+networks:
+  mongo-network:
+    name: mongo-network
+    external: true
 services:
   ml:
     build:
@@ -12,13 +16,17 @@ services:
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
     # This is to allow for a long running container so VSCode can attach to it
     command: tail -F anything
+    networks:
+      - mongo-network
     privileged: true
     environment:
+      - FIFTYONE_DATABASE_URI=mongodb://${MONGO_USER}:${MONGO_USER_PASSWORD}@${MONGO_IP}:27017/?authSource=admin
       - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
+            # Only says one but it actually can use all gpus
               count: 1
               capabilities: [gpu]

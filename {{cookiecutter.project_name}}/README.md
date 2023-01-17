@@ -27,6 +27,26 @@ This has only been tested on Ubuntu 22.04
 docker compose --env-file /etc/environment up -d --build
 ```
 
+```
+./scripts/setup_host.env
+```
+This will check if docker is installed, if not then it will install docker along with the compose plugin for docker and the container runtime for nvidia hardware. It will also set the default configuration of docker to use nvidia as the default runtime. This will enable access to nvidia hardware during the build process of a Dockerfile and not just on run.
+
+
+The script will also check for and automatically create a docker network for mongodb so that a future cookiecutter projects using this template is able to connect to and utilize mongodb which is storing the data for fiftyone. This will help centralize the source of truth for data and reduce multiple copies of large datasets like COCO. Then the monogdb container is started up on that network and the IP of the database is fetched and stored in /etc/environment so all applications will be able to find it. The data is stored at /fiftyone/data/db to make backups easier. When doing an upgrade, it makes for easier backing up and exporting of the data. 
+
+```
+docker compose --env-file /etc/environment up -d --build
+```
+
+This will build your development environment. It copies in the poetry.lock and pyproject.toml to which checks for changes in the environment. It will build and install all the packages you have defined. 
+
+
+After the image is built the container is attached to the mongo docker network, and the environment variables that fiftyone needs to access mongo are passed in. 
+
+The default command for the container allows it to run indefinitely. This is to allow for a long running container so VSCode can attach to it along with the useful debugging tools. VSCode is not the only IDE that can connect to a docker container, but it is the best IDE that I have seen in doing that.
+
+
 ## Tests
 
 To run all tests:

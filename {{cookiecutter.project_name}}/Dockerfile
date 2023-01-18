@@ -31,13 +31,15 @@ RUN wget https://bootstrap.pypa.io/get-pip.py; \
     $(echo "python$PYTHON_VERSION") -m pip install --upgrade pip; \
     rm get-pip.py
 
+RUN pip install poetry; \
+    poetry config installer.max-workers 10; \
+    poetry self add poetry-plugin-up
+
 RUN mkdir -p /home/{{cookiecutter.project_name}}
 COPY poetry.lock pyproject.toml /home/{{cookiecutter.project_name}}/
 WORKDIR /home/{{cookiecutter.project_name}}/
 # poetry-plugin-up lets you bump versions in pyproject.toml to the version you have installed if you have updated
-RUN pip install poetry; \
-    poetry self add poetry-plugin-up; \
-    poetry install; \
+RUN poetry install; \
     poetry run poe pytorch
 
 # need git to install pre-commit hooks can be done after docker build but this is more fool-proof

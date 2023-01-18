@@ -20,7 +20,7 @@ except ImportError:
     raise SystemExit(dedent(message)) from None
 
 
-package = "chunker"
+package = "{{cookiecutter.package_name}}"
 python_versions = ["3.10"]
 nox.needs_version = ">= 2022.1.7"
 nox.options.sessions = (

@@ -37,5 +37,12 @@ WORKDIR /home/{{cookiecutter.project_name}}/
 RUN pip install poetry; \
     poetry self add poetry-plugin-up; \
     poetry install; \
-    poetry run poe pytorch; \
-    poetry run poe fiftyone
+    poetry run poe pytorch
+
+# need git to install pre-commit hooks can be done after docker build but this is more fool-proof
+# If this is a docker image you will publish then this part should be removed. 
+# This section is only so that the development experience is more natural: git commands from inside the container
+COPY .git .git
+RUN git config --global --add safe.directory /home/{{cookiecutter.project_name}}
+COPY dev_configurations/.pre-commit-config.yaml /home/{{cookiecutter.project_name}}/dev_configuration
+RUN poetry run pre-commit install -c /home/{{cookiecutter.project_name}}/dev_configurations/.pre-commit-config.yaml

@@ -34,6 +34,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py; \
 RUN mkdir -p /home/{{cookiecutter.project_name}}
 COPY poetry.lock pyproject.toml /home/{{cookiecutter.project_name}}/
 WORKDIR /home/{{cookiecutter.project_name}}/
+# poetry-plugin-up lets you bump versions in pyproject.toml to the version you have installed if you have updated
 RUN pip install poetry; \
     poetry self add poetry-plugin-up; \
     poetry install; \

@@ -1,7 +1,7 @@
 version: "3.9"
 networks:
-  mongo-network:
-    name: mongo-network
+  fiftyone-network:
+    name: fiftyone-network
     external: true
 services:
   ml:
@@ -16,7 +16,7 @@ services:
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
     command: tail -F anything
     networks:
-      - mongo-network
+      - fiftyone-network
     privileged: true
     environment:
       - FIFTYONE_DATABASE_URI=mongodb://${MONGO_USER}:${MONGO_USER_PASSWORD}@${MONGO_IP}:27017/?authSource=admin

@@ -54,10 +54,10 @@ then
 else
     sudo mkdir -p /fiftyone/data/db
     # Checks if mongo network exists if not creates it
-    docker network inspect mongo-network >/dev/null 2>&1 || \
-    docker network create --driver bridge mongo-network
+    docker network inspect fiftyone-network >/dev/null 2>&1 || \
+    docker network create --driver bridge fiftyone-network
     # Sets mongo to always be running this is done so that the database can be used across multiple projects
-    sudo docker run -d --restart always --network mongo-network -e MONGO_INITDB_ROOT_USERNAME=root \
+    sudo docker run -d --restart always --network fiftyone-network -e MONGO_INITDB_ROOT_USERNAME=root \
     -e MONGO_INITDB_ROOT_PASSWORD=password -v /fiftyone/data/db:/data/db \
     -p 27017:27017 --name mongo-container mongo:latest
     # Should change these if security is a concern or exposed to the internet

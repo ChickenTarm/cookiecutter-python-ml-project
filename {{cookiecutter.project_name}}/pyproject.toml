@@ -32,7 +32,7 @@ pytorch-lightning = "^1.8.6"
 wandb = "^0.13.9"
 fiftyone = "^0.18.0"
 numpy = "^1.24.1"
-opencv-python = "^4.7.0.68"
+opencv-python-headless = "^4.7.0.68"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"

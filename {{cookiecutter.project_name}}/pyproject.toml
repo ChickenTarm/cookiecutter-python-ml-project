@@ -20,6 +20,7 @@ classifiers = [
 Changelog = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases"
 
 [tool.poe.tasks]
+# This should only be called if you know you are using nvidia gpus
 pytorch = "python -m pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 -f https://download.pytorch.org/whl/torch_stable.html"
 
 [tool.poetry.dependencies]

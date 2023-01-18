@@ -31,6 +31,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py; \
     $(echo "python$PYTHON_VERSION") -m pip install --upgrade pip; \
     rm get-pip.py
 
+# poetry-plugin-up lets you bump versions in pyproject.toml to the version you have installed if you have updated
 RUN pip install poetry; \
     poetry config installer.max-workers 10; \
     poetry self add poetry-plugin-up
@@ -38,7 +39,6 @@ RUN pip install poetry; \
 RUN mkdir -p /home/{{cookiecutter.project_name}}
 COPY poetry.lock pyproject.toml /home/{{cookiecutter.project_name}}/
 WORKDIR /home/{{cookiecutter.project_name}}/
-# poetry-plugin-up lets you bump versions in pyproject.toml to the version you have installed if you have updated
 RUN poetry install; \
     poetry run poe pytorch
 

@@ -8,7 +8,7 @@ author = "{{cookiecutter.author}}"
 copyright = "{{cookiecutter.copyright_year}}, {{cookiecutter.author}}"
 extensions = [
     "sphinx.ext.autodoc",
-    'sphinx.ext.autosummary',
+    "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
     "sphinx_click",
 ]

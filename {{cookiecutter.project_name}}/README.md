@@ -83,7 +83,7 @@ nox --session docs-build
 `
 
 ## CI
-The CI is located at .gitlab-ci.yml
+The CI is located at .github
 
 The tests in the ci will run and produce an artifact that will be used for test report via allure.
 
@@ -91,6 +91,7 @@ The results should be viewable throught Settings -> Pages
 
 ## Poetry
 ### Adding a package
+The poetry equivalent to pip is underneath.
 Pip:
 
 `
@@ -106,7 +107,7 @@ poetry add <package1> <package2>
 To add a package that is only used for development purposes:
 
 `
-poetry add -D <package1> <package2>
+poetry add --group=dev <package1> <package2>
 `
 ### Remove a package
 Pip:
@@ -124,7 +125,7 @@ poetry remove <package1> <package2>
 To remove a package that is only used for development purposes:
 
 `
-poetry remove -D <package1> <package2>
+poetry remove --group=dev <package1> <package2>
 `
 ### Installing dependencies from a file
 Pip:
@@ -142,5 +143,5 @@ poetry install
 To install non-development dependencies
 
 `
-poetry install --no-dev
+poetry install --without=dev
 `

@@ -24,7 +24,7 @@ This has only been tested on Ubuntu 22.04
 
 ```
 ./scripts/setup_host.env
-docker compose --env-file /etc/environment up -d --build
+docker compose --env-file /etc/environment up -d --build --force-recreate
 ```
 
 ```

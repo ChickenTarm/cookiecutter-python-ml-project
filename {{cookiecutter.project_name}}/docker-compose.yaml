@@ -1,7 +1,7 @@
 version: "3.9"
 networks:
-  fiftyone-network:
-    name: fiftyone-network
+  ml-network:
+    name: ml-network
     external: true
 services:
   ml:
@@ -12,14 +12,18 @@ services:
         PYTHON_VERSION: "3.10"
       tags:
         - {{cookiecutter.project_name}}
+    ports:
+      # exposes this port so if a fiftyone app is started, you can view the app in your browser at localhost:5151
+      - 5151:5151
     volumes:
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
     command: tail -F anything
     networks:
-      - fiftyone-network
+      - ml-network
     privileged: true
     environment:
       - FIFTYONE_DATABASE_URI=mongodb://${MONGO_USER}:${MONGO_USER_PASSWORD}@${MONGO_IP}:27017/?authSource=admin
+      - QDRANT_IP=${QDRANT_IP}
       - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
     deploy:
       resources:

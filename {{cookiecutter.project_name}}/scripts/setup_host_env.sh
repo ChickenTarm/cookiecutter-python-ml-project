@@ -53,15 +53,30 @@ then
     echo "There is an existing mongodb. If you want a fresh install please remove /fiftyone/data/db"
 else
     sudo mkdir -p /fiftyone/data/db
-    # Checks if mongo network exists if not creates it
-    docker network inspect fiftyone-network >/dev/null 2>&1 || \
-    docker network create --driver bridge fiftyone-network
+    # Checks if ml-network exists if not creates it
+    docker network inspect ml-network >/dev/null 2>&1 || \
+    docker network create --driver bridge ml-network
     # Sets mongo to always be running this is done so that the database can be used across multiple projects
-    sudo docker run -d --restart always --network fiftyone-network -e MONGO_INITDB_ROOT_USERNAME=root \
+    sudo docker run -d --restart always --network ml-network -e MONGO_INITDB_ROOT_USERNAME=root \
     -e MONGO_INITDB_ROOT_PASSWORD=password -v /fiftyone/data/db:/data/db \
     -p 27017:27017 --name mongo-container mongo:latest
     # Should change these if security is a concern or exposed to the internet
     echo -e "MONGO_USER=\"root\"\nMONGO_USER_PASSWORD=\"password\""| sudo tee -a /etc/environment
     echo "MONGO_IP=\"$(sudo docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mongo-container)\"" | sudo tee -a /etc/environment
+    source /etc/environment
+fi
+
+if [ -d "/qdrant/storage" ]
+then
+    echo "There is an existing qdrant db. If you want a fresh install please remove /qdrant/storage"
+else
+    sudo mkdir -p /qdrant/storage
+    # Checks if ml-network exists if not creates it
+    docker network inspect ml-network >/dev/null 2>&1 || \
+    docker network create --driver bridge ml-network
+    # Sets qdrant to always be running this is done so that the database can be used across multiple projects
+    sudo docker run -d --restart always --network ml-network -v /qdrant/storage:/qdrant/storage \
+    -p 6333:6333 -p 6334:6334 --name qdrant-container qdrant/qdrant:latest
+    echo "QDRANT_IP=\"$(sudo docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' qdrant-container)\"" | sudo tee -a /etc/environment
     source /etc/environment
 fi

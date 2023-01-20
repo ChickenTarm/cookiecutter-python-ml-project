@@ -53,6 +53,7 @@ then
     echo "There is an existing mongodb. If you want a fresh install please remove /fiftyone/data/db"
 else
     sudo mkdir -p /fiftyone/data/db
+    sudo mkdir -p /fiftyone/data/media
     # Checks if ml-network exists if not creates it
     docker network inspect ml-network >/dev/null 2>&1 || \
     docker network create --driver bridge ml-network

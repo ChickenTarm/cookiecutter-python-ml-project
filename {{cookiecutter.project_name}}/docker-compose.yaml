@@ -16,6 +16,7 @@ services:
       # exposes this port so if a fiftyone app is started, you can view the app in your browser at localhost:5151
       - 5151:5151
     volumes:
+      - /fiftyone/data/media:/root/fiftyone
       - ~/{{cookiecutter.project_name}}:/home/{{cookiecutter.project_name}}
     command: tail -F anything
     networks:

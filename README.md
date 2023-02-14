@@ -3,7 +3,6 @@
 <!-- badges-begin -->
 
 [![License][license badge]][license]<br>
-[![Read the documentation][readthedocs badge]][readthedocs page]
 [![pre-commit enabled][pre-commit badge]][pre-commit project]
 [![Black codestyle][black badge]][black project]
 [![Contributor Covenant][contributor covenant badge]][code of conduct]
@@ -19,8 +18,6 @@
 [license]: https://opensource.org/licenses/MIT
 [pre-commit badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 [pre-commit project]: https://pre-commit.com/
-[readthedocs badge]: https://img.shields.io/readthedocs/cookiecutter-hypermodern-python/latest.svg?label=Read%20the%20Docs
-[readthedocs page]: https://cookiecutter-hypermodern-python.readthedocs.io/
 
 
 <!-- badges-end -->

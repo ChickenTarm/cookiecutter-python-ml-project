@@ -2,7 +2,6 @@
 
 <!-- badges-begin -->
 
-[![Status][status badge]][status badge]
 [![License][license badge]][license]<br>
 [![Read the documentation][readthedocs badge]][readthedocs page]
 [![pre-commit enabled][pre-commit badge]][pre-commit project]
@@ -16,17 +15,20 @@
 [contributor covenant badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [github actions badge]: https://github.com/ChickenTarm/my-ml-python-cookiecutter/workflows/Tests/badge.svg
 [github page]: https://github.com/ChickenTarm/my-ml-python-cookiecutter
-[license badge]: https://img.shields.io/github/license/ChickenTarm/my-ml-python-cookiecutter
+[license badge]: https://img.shields.io/github/license/ChickenTarm/cookiecutter-python-ml-project
 [license]: https://opensource.org/licenses/MIT
 [pre-commit badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 [pre-commit project]: https://pre-commit.com/
 [readthedocs badge]: https://img.shields.io/readthedocs/cookiecutter-hypermodern-python/latest.svg?label=Read%20the%20Docs
 [readthedocs page]: https://cookiecutter-hypermodern-python.readthedocs.io/
-[status badge]: https://badgen.net/badge/status/alpha/d8624d
+
 
 <!-- badges-end -->
+<p align="center">
+<img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*rLqrYHetoNXlt5xI.png"  width="50%" height="50%">
+</p>
 
-Opinionated [Cookiecutter] template for ML Python package based on [Hypermodern Python Cookiecutter].
+A [Cookiecutter] template for ML Python package based on the [Automatic ML Project Setup] article.
 
 This is designed with reproducibility, distribution, and easy data wrangling and exploration in mind. Many different ml repos have differing: data structures, training loops, visualizations, and deployment.
 
@@ -37,6 +39,7 @@ This is designed with reproducibility, distribution, and easy data wrangling and
 
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
+[automatic ml project setup]: https://medium.com/voxel51/automatically-set-up-a-new-ml-project-pain-free-voxel51-1b900daaaf77
 [hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
 
 ## Usage

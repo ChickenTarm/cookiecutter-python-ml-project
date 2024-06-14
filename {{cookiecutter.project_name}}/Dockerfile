@@ -42,6 +42,8 @@ WORKDIR /home/{{cookiecutter.project_name}}/
 RUN poetry install; \
     poetry run poe pytorch
 
+ENV PYTHONPATH="${PYTHONPATH}:/home/{{cookiecutter.project_name}}/src"
+
 # need git to install pre-commit hooks can be done after docker build but this is more fool-proof
 # If this is a docker image you will publish then this part should be removed. 
 # This section is only so that the development experience is more natural: git commands from inside the container
